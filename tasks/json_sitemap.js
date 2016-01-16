@@ -20,19 +20,21 @@
       var _siteroot, i, len, locale, map_path, mapfile, properties, ref, result, route, routes, settings, siteroot, urlset;
       map_path = this.data.map || pkg.sitemap;
       if (!map_path) {
-        grunt.fail.warn('Requires "map" property in config or "sitemap" property in package.json file. Sitemap was not created.', 3);
+        return grunt.log.ok('Requires "map" property in config or "sitemap" property in package.json file. Sitemap was not created.');
       }
-      mapfile = grunt.file.readJSON(map_path);
+      try {
+        mapfile = grunt.file.readJSON(map_path);
+      } catch (_error) {}
       if (!mapfile) {
-        grunt.fail.warn('Requires map file to be a JSON file. Sitemap was not created.', 3);
+        return grunt.log.ok('Requires map file to be a JSON file. Sitemap was not created.');
       }
       siteroot = this.data.siteroot || mapfile.siteroot;
       if (!siteroot) {
-        grunt.fail.warn('Mapfile requires "siteroot" property. Sitemap was not created.', 3);
+        return grunt.log.ok('Mapfile requires "siteroot" property. Sitemap was not created.');
       }
       routes = mapfile.routes;
       if (!routes) {
-        grunt.fail.warn('Mapfile requires "routes" property. Sitemap was not created.', 3);
+        return grunt.log.ok('Mapfile requires "routes" property. Sitemap was not created.');
       }
       settings = {
         locales: this.data.locales || mapfile.locales || ["en"],

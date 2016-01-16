@@ -19,19 +19,20 @@ module.exports = (grunt) ->
         # Check if user has a sitemap property in his package.json file
         # or a mapfile property in config
         map_path = @data.map or pkg.sitemap
-        grunt.fail.warn('Requires "map" property in config or "sitemap" property in package.json file. Sitemap was not created.', 3) unless map_path
+        return grunt.log.ok('Requires "map" property in config or "sitemap" property in package.json file. Sitemap was not created.') unless map_path
 
         # Try to read json mapfile
-        mapfile = grunt.file.readJSON map_path
-        grunt.fail.warn('Requires map file to be a JSON file. Sitemap was not created.', 3) unless mapfile
+        try
+            mapfile = grunt.file.readJSON map_path
+        return grunt.log.ok('Requires map file to be a JSON file. Sitemap was not created.') unless mapfile
 
         # Check for siteroot property in mapfile
         siteroot = @data.siteroot or mapfile.siteroot
-        grunt.fail.warn('Mapfile requires "siteroot" property. Sitemap was not created.', 3) unless siteroot
+        return grunt.log.ok('Mapfile requires "siteroot" property. Sitemap was not created.') unless siteroot
 
         # Check for routes property in mapfile
         routes = mapfile.routes
-        grunt.fail.warn('Mapfile requires "routes" property. Sitemap was not created.', 3) unless routes
+        return grunt.log.ok('Mapfile requires "routes" property. Sitemap was not created.') unless routes
 
         # Get settings (not mandatory)
         settings =
