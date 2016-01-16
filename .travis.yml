@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '4'
+
+before_install:
+- npm i grunt-cli -g
+
+install:
+- npm i
+
+script:
+- grunt build
+- grunt test

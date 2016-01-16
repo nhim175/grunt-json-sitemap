@@ -1,0 +1,10 @@
+{
+    "siteroot": "http://www.google.fr/:locale",
+    "locales": ["fr","en","es"],
+    "changefreq": "yearly",
+    "lastmod": "2016-01-12",
+    "routes": [
+        "/route/1",
+        "/route/2"
+    ]
+}

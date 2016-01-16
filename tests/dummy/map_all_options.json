@@ -1,0 +1,12 @@
+{
+    "siteroot": "http://www.google.fr/:locale",
+    "locales": ["fr","en","es"],
+    "changefreq": "yearly",
+    "lastmod": "2016-01-12",
+    "routes": {
+        "/route/1": {
+            "priority": 0.8
+        },
+        "/route/2": {}
+    }
+}
