@@ -36,5 +36,5 @@
         "grunt-mocha-test": "^0.12.7",
         "mocha": "^2.3.4"
     },
-    "sitemap": "dummy/map_from_package.json"
+    "sitemap": "tests/dummy/map_from_package.json"
 }
