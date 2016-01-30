@@ -1,6 +1,6 @@
 {
     "name": "grunt-json-sitemap",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Create a sitemap from a simple json file containing routes",
     "main": "tasks/json_sitemap.js",
     "scripts": {
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dackmin/grunt-json-sitemap.git"
+        "url": "git+https://github.com/o2dly/grunt-json-sitemap.git"
     },
     "keywords": [
         "grunt",
@@ -23,9 +23,9 @@
     "author": "Ugo Stephant <ugo@oddly.fr>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/dackmin/grunt-json-sitemap/issues"
+        "url": "https://github.com/o2dly/grunt-json-sitemap/issues"
     },
-    "homepage": "https://github.com/dackmin/grunt-json-sitemap#readme",
+    "homepage": "https://github.com/o2dly/grunt-json-sitemap#readme",
     "dependencies": {
         "moment": "^2.11.1",
         "xmlbuilder": "^4.2.1"
