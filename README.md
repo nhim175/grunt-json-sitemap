@@ -1,4 +1,4 @@
-# grunt-json-sitemap [![Build Status](https://travis-ci.org/dackmin/grunt-json-sitemap.svg?branch=master)](https://travis-ci.org/dackmin/grunt-json-sitemap)
+# grunt-json-sitemap [![Build Status](https://travis-ci.org/o2dly/grunt-json-sitemap.svg?branch=master)](https://travis-ci.org/o2dly/grunt-json-sitemap)
 
 > Create a sitemap from a simple json file containing routes.
 
@@ -25,7 +25,7 @@ grunt.loadNpmTasks("grunt-json-sitemap");
 
 Run this task with the `grunt json_sitemap` command.
 
-### Usage examples
+### Usage example
 
 ```js
 json_sitemap: {
@@ -132,4 +132,4 @@ You also have to respect the coding styles I used in this project, otherwise you
 
 ## Release History
 
-See [Changelog.md](Changelog.md)
+See [CHANGELOG.md](CHANGELOG.md)
